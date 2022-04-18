@@ -1,0 +1,234 @@
+:root {
+  --color-50: #fffbeb;
+  --color-500: #f59e0b;
+  --color-600: #d97706;
+  --color-700: #b45309;
+  --color-800: #92400e;
+
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 62.5%;
+  color: var(--color-50);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(jonathan-borba-xUtkfr-qBFU-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-clip: border-box;
+  background-origin: border-box;
+  display: grid;
+  justify-content: center;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#content {
+  width: 114rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "head"
+    "main"
+    "foot";
+}
+
+.header {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.logo {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo > svg {
+  height: 4rem;
+  width: 4rem;
+  fill: var(--color-600);
+}
+
+.nav-list {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-item {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav-item > a:hover {
+  color: var(--color-500);
+}
+
+.home-content {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-content > h2 {
+  font-size: 8rem;
+  font-family: "Satisfy", cursive;
+}
+
+.home-content > span {
+  font-size: 9rem;
+}
+
+.home-content > p {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.home-content > p > span {
+  color: var(--color-600);
+}
+
+.home-content > a {
+  background-color: var(--color-600);
+  border-radius: 0.8rem;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.home-content > a:hover,
+.home-content > a:active {
+  background-color: var(--color-500);
+}
+
+.menu-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+  gap: 5rem;
+}
+
+.menu {
+  background-color: var(--color-700);
+  border-radius: 0.5rem;
+}
+
+.menu-heading {
+  font-family: "Satisfy", cursive;
+  background-color: var(--color-600);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.menu-list {
+  padding: 4rem;
+}
+
+.menu-item-title {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Satisfy", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.menu-item-description {
+  font-size: 1.4rem;
+}
+
+.menu-item-description:not(:last-child) {
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 0.3rem solid var(--color-800);
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-heading {
+  font-family: "Satisfy", cursive;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.contact-information {
+  font-style: normal;
+}
+
+.contact-information > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 2rem;
+}
+
+.contact-information > ul > li > span {
+  font-weight: 700;
+}
+
+.contact-information > ul > li > a:hover {
+  color: var(--color-500);
+}
+
+.footer {
+  grid-area: foot;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.footer .github-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: currentColor;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer .github-icon:hover,
+.footer .github-icon:active {
+  transform: rotate(360deg) scale(1.1);
+}

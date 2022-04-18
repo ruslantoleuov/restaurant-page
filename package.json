@@ -1,0 +1,25 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Project: Restaurant Page",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruslantoleuov/restaurant-page.git"
+  },
+  "keywords": [],
+  "author": "Ruslan Toleuov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruslantoleuov/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/ruslantoleuov/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
